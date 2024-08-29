@@ -43,15 +43,16 @@ struct ProfileView: View {
                                             .foregroundStyle(.black.opacity(0.75))
                                             .font(.system(size: 22, weight: .semibold, design: .monospaced))
                                             .padding(.top)
+                                            .frame(width: 85)
                                         
                                         Text("\(authViewModel.currentuser?.fullname ?? "")")
                                             .foregroundStyle(.black.opacity(0.75))
-                                            .font(.system(size: 18, weight: .light, design: .monospaced))
+                                            .font(.system(size: 16, weight: .regular, design: .monospaced))
                                             .padding(.top)
                                         
                                         Spacer()
                                     }
-                                    .padding(.leading, 20)
+                                    .padding(.leading, 10)
                                 }
                             
                             Rectangle()
@@ -63,17 +64,18 @@ struct ProfileView: View {
                                     HStack {
                                         Text("Email:")
                                             .foregroundStyle(.black.opacity(0.75))
-                                            .font(.system(size: 22, weight: .semibold, design: .monospaced))
+                                            .font(.system(size: 22, weight: .regular, design: .monospaced))
                                             .padding(.top)
+                                            .frame(width: 85)
                                         
                                         Text("\(authViewModel.currentuser?.email ?? "")")
                                             .foregroundStyle(.black.opacity(0.75))
-                                            .font(.system(size: 18, weight: .light, design: .monospaced))
+                                            .font(.system(size: 16, weight: .light, design: .monospaced))
                                             .padding(.top)
                                         
                                         Spacer()
                                     }
-                                    .padding(.leading, 20)
+                                    .padding(.leading, 10)
                                 }
                         }
                         
