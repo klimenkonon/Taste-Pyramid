@@ -35,6 +35,10 @@
 		A56741C62C7B3E9E00C5C6D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C52C7B3E9E00C5C6D0 /* DataManager.swift */; };
 		A56741C82C7B460B00C5C6D0 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C72C7B460B00C5C6D0 /* OrderDetailView.swift */; };
 		A56741CA2C7B564F00C5C6D0 /* RealmFavourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C92C7B564F00C5C6D0 /* RealmFavourite.swift */; };
+		A5C8DDE92C8F2AC7007226FE /* AppsFlyerLib-Static in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */; };
+		A5C8DDEC2C8F2ADD007226FE /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDEB2C8F2ADD007226FE /* FacebookCore */; };
+		A5C8DDEF2C8F2AF1007226FE /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */; };
+		A5C8DDF12C8F3242007226FE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8DDF02C8F3242007226FE /* WebView.swift */; };
 		A5E523BE2C7C8964001A7904 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E523BD2C7C8964001A7904 /* FavouriteViewModel.swift */; };
 		A5E523DD2C7CD638001A7904 /* TimeSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E523DC2C7CD638001A7904 /* TimeSelectionView.swift */; };
 		A5E523DF2C7CDAFE001A7904 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5E523DE2C7CDAFE001A7904 /* GoogleService-Info.plist */; };
@@ -42,7 +46,6 @@
 		A5E523E32C7CDDD0001A7904 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E523E22C7CDDD0001A7904 /* User.swift */; };
 		A5E523E52C7CDE2B001A7904 /* ProgressAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E523E42C7CDE2B001A7904 /* ProgressAlert.swift */; };
 		A5F3886A2C74B85700BA151A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F388692C74B85700BA151A /* AppDelegate.swift */; };
-		A5F3886C2C74B85700BA151A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3886B2C74B85700BA151A /* SceneDelegate.swift */; };
 		A5F3886E2C74B85700BA151A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F3886D2C74B85700BA151A /* ViewController.swift */; };
 		A5F388712C74B85800BA151A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A5F388702C74B85800BA151A /* Base */; };
 		A5F388732C74B85A00BA151A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F388722C74B85A00BA151A /* Assets.xcassets */; };
@@ -89,6 +92,7 @@
 		A56741C52C7B3E9E00C5C6D0 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A56741C72C7B460B00C5C6D0 /* OrderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailView.swift; sourceTree = "<group>"; };
 		A56741C92C7B564F00C5C6D0 /* RealmFavourite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmFavourite.swift; sourceTree = "<group>"; };
+		A5C8DDF02C8F3242007226FE /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		A5E523BD2C7C8964001A7904 /* FavouriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteViewModel.swift; sourceTree = "<group>"; };
 		A5E523DC2C7CD638001A7904 /* TimeSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionView.swift; sourceTree = "<group>"; };
 		A5E523DE2C7CDAFE001A7904 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -97,7 +101,6 @@
 		A5E523E42C7CDE2B001A7904 /* ProgressAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressAlert.swift; sourceTree = "<group>"; };
 		A5F388662C74B85700BA151A /* PharaohCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PharaohCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F388692C74B85700BA151A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5F3886B2C74B85700BA151A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A5F3886D2C74B85700BA151A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5F388702C74B85800BA151A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5F388722C74B85A00BA151A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -120,6 +123,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0755BD72F87A81C131C955 /* Pods_PharaohCoffee.framework in Frameworks */,
+				A5C8DDEF2C8F2AF1007226FE /* FlagsmithClient in Frameworks */,
+				A5C8DDEC2C8F2ADD007226FE /* FacebookCore in Frameworks */,
+				A5C8DDE92C8F2AC7007226FE /* AppsFlyerLib-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +253,13 @@
 			path = RealmModel;
 			sourceTree = "<group>";
 		};
+		A5C8DDF22C8F3E32007226FE /* Orientation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Orientation;
+			sourceTree = "<group>";
+		};
 		A5F3885D2C74B85700BA151A = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +282,7 @@
 		A5F388682C74B85700BA151A /* PharaohCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				A5C8DDF22C8F3E32007226FE /* Orientation */,
 				A56741B02C774AE200C5C6D0 /* Profile */,
 				A56741AF2C774ADA00C5C6D0 /* Favourite */,
 				A56741AA2C77430E00C5C6D0 /* FoodDetail */,
@@ -299,8 +313,8 @@
 			isa = PBXGroup;
 			children = (
 				A5F388692C74B85700BA151A /* AppDelegate.swift */,
-				A5F3886B2C74B85700BA151A /* SceneDelegate.swift */,
 				A5F3886D2C74B85700BA151A /* ViewController.swift */,
+				A5C8DDF02C8F3242007226FE /* WebView.swift */,
 			);
 			path = APP;
 			sourceTree = "<group>";
@@ -412,6 +426,9 @@
 			);
 			name = PharaohCoffee;
 			packageProductDependencies = (
+				A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */,
+				A5C8DDEB2C8F2ADD007226FE /* FacebookCore */,
+				A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */,
 			);
 			productName = PharaohCoffee;
 			productReference = A5F388662C74B85700BA151A /* PharaohCoffee.app */;
@@ -442,6 +459,9 @@
 			);
 			mainGroup = A5F3885D2C74B85700BA151A;
 			packageReferences = (
+				A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */,
+				A5C8DDEA2C8F2ADC007226FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
 			);
 			productRefGroup = A5F388672C74B85700BA151A /* Products */;
 			projectDirPath = "";
@@ -519,6 +539,7 @@
 				A56741A02C77393000C5C6D0 /* FoodListViewModel.swift in Sources */,
 				A5F3888B2C74BFAC00BA151A /* LogoView.swift in Sources */,
 				A56741922C75FFF200C5C6D0 /* NetworkManager.swift in Sources */,
+				A5C8DDF12C8F3242007226FE /* WebView.swift in Sources */,
 				A567417B2C75DB3D00C5C6D0 /* CustomTabBar.swift in Sources */,
 				A5F3886A2C74B85700BA151A /* AppDelegate.swift in Sources */,
 				A5F388912C74C03D00BA151A /* RegistrationView.swift in Sources */,
@@ -541,7 +562,6 @@
 				A56741B62C77668200C5C6D0 /* ProfileViewModel.swift in Sources */,
 				A56741B22C774AED00C5C6D0 /* FavouriteView.swift in Sources */,
 				A5F3888F2C74C03100BA151A /* LoginView.swift in Sources */,
-				A5F3886C2C74B85700BA151A /* SceneDelegate.swift in Sources */,
 				A56741802C75E32600C5C6D0 /* MainView.swift in Sources */,
 				A56741AC2C77431D00C5C6D0 /* FoodDetailView.swift in Sources */,
 				A56741C02C7B21FA00C5C6D0 /* RealmOrder.swift in Sources */,
@@ -715,17 +735,18 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PharaohCoffee/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Taste Pyramid";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We collect this data for analytics and special offers in the menu for visitors";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to show you personalized ads on the marketplaces.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -753,17 +774,18 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = PharaohCoffee/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Taste Pyramid";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We collect this data for analytics and special offers in the menu for visitors";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "This identifier will be used to show you personalized ads on the marketplaces.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -799,6 +821,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.15.2;
+			};
+		};
+		A5C8DDEA2C8F2ADC007226FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
+		A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.6.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */;
+			productName = "AppsFlyerLib-Static";
+		};
+		A5C8DDEB2C8F2ADD007226FE /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5C8DDEA2C8F2ADC007226FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
+			productName = FlagsmithClient;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A5F3885E2C74B85700BA151A /* Project object */;
 }
