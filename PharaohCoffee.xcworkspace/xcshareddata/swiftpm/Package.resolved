@@ -1,15 +1,6 @@
 {
-  "originHash" : "0d87ff40ad20dba5103fb26f0a3b91c3f79cb08acc521d6ca471b4763371c313",
+  "originHash" : "c3d25accb05db2dbcb91cc49079130df6cb945ff85e502cbf729e5c23448a832",
   "pins" : [
-    {
-      "identity" : "appsflyerframework-static",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static",
-      "state" : {
-        "revision" : "ee61c7cd170e72235d9c029ec7df69aaa5a4b623",
-        "version" : "6.15.2"
-      }
-    },
     {
       "identity" : "flagsmith-ios-client",
       "kind" : "remoteSourceControl",

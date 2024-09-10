@@ -9,7 +9,7 @@
 
 import SwiftUI
 import FlagsmithClient
-import FacebookCore
+import FBSDKCoreKit
 import AppsFlyerLib
 import AppTrackingTransparency
 import AdSupport

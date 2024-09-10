@@ -35,8 +35,7 @@
 		A56741C62C7B3E9E00C5C6D0 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C52C7B3E9E00C5C6D0 /* DataManager.swift */; };
 		A56741C82C7B460B00C5C6D0 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C72C7B460B00C5C6D0 /* OrderDetailView.swift */; };
 		A56741CA2C7B564F00C5C6D0 /* RealmFavourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C92C7B564F00C5C6D0 /* RealmFavourite.swift */; };
-		A5C8DDE92C8F2AC7007226FE /* AppsFlyerLib-Static in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */; };
-		A5C8DDEF2C8F2AF1007226FE /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */; };
+		A5B1A10A2C904C6C00C92EAF /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = A5B1A1092C904C6C00C92EAF /* FlagsmithClient */; };
 		A5C8DDF12C8F3242007226FE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8DDF02C8F3242007226FE /* WebView.swift */; };
 		A5C8DDF62C9037F4007226FE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A5C8DDF52C9037F4007226FE /* PrivacyInfo.xcprivacy */; };
 		A5E523BE2C7C8964001A7904 /* FavouriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5E523BD2C7C8964001A7904 /* FavouriteViewModel.swift */; };
@@ -124,8 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C0755BD72F87A81C131C955 /* Pods_PharaohCoffee.framework in Frameworks */,
-				A5C8DDEF2C8F2AF1007226FE /* FlagsmithClient in Frameworks */,
-				A5C8DDE92C8F2AC7007226FE /* AppsFlyerLib-Static in Frameworks */,
+				A5B1A10A2C904C6C00C92EAF /* FlagsmithClient in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,7 +417,8 @@
 				A5F388622C74B85700BA151A /* Sources */,
 				A5F388632C74B85700BA151A /* Frameworks */,
 				A5F388642C74B85700BA151A /* Resources */,
-				6DE4CEE3E0ABE08FC5D3C437 /* [CP] Embed Pods Frameworks */,
+				947183559A62C312055D6007 /* [CP] Embed Pods Frameworks */,
+				4E6488B929B4A54F44BA4A16 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -427,8 +426,7 @@
 			);
 			name = PharaohCoffee;
 			packageProductDependencies = (
-				A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */,
-				A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */,
+				A5B1A1092C904C6C00C92EAF /* FlagsmithClient */,
 			);
 			productName = PharaohCoffee;
 			productReference = A5F388662C74B85700BA151A /* PharaohCoffee.app */;
@@ -459,8 +457,7 @@
 			);
 			mainGroup = A5F3885D2C74B85700BA151A;
 			packageReferences = (
-				A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */,
-				A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
+				A5B1A1082C904C6C00C92EAF /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
 			);
 			productRefGroup = A5F388672C74B85700BA151A /* Products */;
 			projectDirPath = "";
@@ -509,7 +506,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6DE4CEE3E0ABE08FC5D3C437 /* [CP] Embed Pods Frameworks */ = {
+		4E6488B929B4A54F44BA4A16 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PharaohCoffee/Pods-PharaohCoffee-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PharaohCoffee/Pods-PharaohCoffee-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PharaohCoffee/Pods-PharaohCoffee-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		947183559A62C312055D6007 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -823,15 +837,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework-Static";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.15.2;
-			};
-		};
-		A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
+		A5B1A1082C904C6C00C92EAF /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
 			requirement = {
@@ -842,14 +848,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */ = {
+		A5B1A1092C904C6C00C92EAF /* FlagsmithClient */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */;
-			productName = "AppsFlyerLib-Static";
-		};
-		A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
+			package = A5B1A1082C904C6C00C92EAF /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;
 			productName = FlagsmithClient;
 		};
 /* End XCSwiftPackageProductDependency section */
