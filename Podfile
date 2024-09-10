@@ -8,7 +8,7 @@ target 'PharaohCoffee' do
    pod 'RealmSwift'
    pod 'FirebaseAuth'
    pod 'FirebaseFirestore'
-   pod 'FBSDKCoreKit', '16.1.3'
+   pod 'FBSDKCoreKit'
 
   # Pods for PharaohCoffee
 
