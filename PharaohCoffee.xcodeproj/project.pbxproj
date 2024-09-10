@@ -36,7 +36,6 @@
 		A56741C82C7B460B00C5C6D0 /* OrderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C72C7B460B00C5C6D0 /* OrderDetailView.swift */; };
 		A56741CA2C7B564F00C5C6D0 /* RealmFavourite.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56741C92C7B564F00C5C6D0 /* RealmFavourite.swift */; };
 		A5C8DDE92C8F2AC7007226FE /* AppsFlyerLib-Static in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */; };
-		A5C8DDEC2C8F2ADD007226FE /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDEB2C8F2ADD007226FE /* FacebookCore */; };
 		A5C8DDEF2C8F2AF1007226FE /* FlagsmithClient in Frameworks */ = {isa = PBXBuildFile; productRef = A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */; };
 		A5C8DDF12C8F3242007226FE /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C8DDF02C8F3242007226FE /* WebView.swift */; };
 		A5C8DDF62C9037F4007226FE /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = A5C8DDF52C9037F4007226FE /* PrivacyInfo.xcprivacy */; };
@@ -126,7 +125,6 @@
 			files = (
 				7C0755BD72F87A81C131C955 /* Pods_PharaohCoffee.framework in Frameworks */,
 				A5C8DDEF2C8F2AF1007226FE /* FlagsmithClient in Frameworks */,
-				A5C8DDEC2C8F2ADD007226FE /* FacebookCore in Frameworks */,
 				A5C8DDE92C8F2AC7007226FE /* AppsFlyerLib-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +428,6 @@
 			name = PharaohCoffee;
 			packageProductDependencies = (
 				A5C8DDE82C8F2AC7007226FE /* AppsFlyerLib-Static */,
-				A5C8DDEB2C8F2ADD007226FE /* FacebookCore */,
 				A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */,
 			);
 			productName = PharaohCoffee;
@@ -463,7 +460,6 @@
 			mainGroup = A5F3885D2C74B85700BA151A;
 			packageReferences = (
 				A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */,
-				A5C8DDEA2C8F2ADC007226FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
 			);
 			productRefGroup = A5F388672C74B85700BA151A /* Products */;
@@ -835,14 +831,6 @@
 				minimumVersion = 6.15.2;
 			};
 		};
-		A5C8DDEA2C8F2ADC007226FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 14.1.0;
-			};
-		};
 		A5C8DDED2C8F2AF1007226FE /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
@@ -858,11 +846,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A5C8DDE72C8F2AC7007226FE /* XCRemoteSwiftPackageReference "AppsFlyerFramework-Static" */;
 			productName = "AppsFlyerLib-Static";
-		};
-		A5C8DDEB2C8F2ADD007226FE /* FacebookCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A5C8DDEA2C8F2ADC007226FE /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
-			productName = FacebookCore;
 		};
 		A5C8DDEE2C8F2AF1007226FE /* FlagsmithClient */ = {
 			isa = XCSwiftPackageProductDependency;

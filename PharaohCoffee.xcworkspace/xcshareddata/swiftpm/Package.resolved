@@ -1,5 +1,5 @@
 {
-  "originHash" : "f7f22261b5990d4dc704b927d23947187b68d6c7fe56ea70d2ebc033b2d764d1",
+  "originHash" : "0d87ff40ad20dba5103fb26f0a3b91c3f79cb08acc521d6ca471b4763371c313",
   "pins" : [
     {
       "identity" : "appsflyerframework-static",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "ee61c7cd170e72235d9c029ec7df69aaa5a4b623",
         "version" : "6.15.2"
-      }
-    },
-    {
-      "identity" : "facebook-ios-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/facebook/facebook-ios-sdk",
-      "state" : {
-        "revision" : "c19607d535864533523d1f437c84035e5fb101cf",
-        "version" : "14.1.0"
       }
     },
     {
