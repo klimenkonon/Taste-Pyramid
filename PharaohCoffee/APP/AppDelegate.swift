@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
         initialVC = viewController
         window?.rootViewController = initialVC
         window?.makeKeyAndVisible()
-        
+        AppsFlyerLib.shared().isDebug = true
         AppsFlyerLib.shared().appsFlyerDevKey = "mpNYjAVqWiS5DMw4sBXsRG"
         AppsFlyerLib.shared().appleAppID = "6670198961"
         AppsFlyerLib.shared().deepLinkDelegate = self
