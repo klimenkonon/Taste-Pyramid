@@ -29,7 +29,5 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
-	<key>NSAdvertisingAttributionReportEndpoint</key>
-	<string>https://appsflyer-skadnetwork.com/</string>
 </dict>
 </plist>

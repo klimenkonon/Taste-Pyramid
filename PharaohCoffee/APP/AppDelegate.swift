@@ -32,12 +32,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
         initialVC = viewController
         window?.rootViewController = initialVC
         window?.makeKeyAndVisible()
-        AppsFlyerLib.shared().isDebug = true
         AppsFlyerLib.shared().appsFlyerDevKey = "mpNYjAVqWiS5DMw4sBXsRG"
         AppsFlyerLib.shared().appleAppID = "6670198961"
         AppsFlyerLib.shared().deepLinkDelegate = self
         AppsFlyerLib.shared().delegate = self
-        
         
         start(viewController: viewController)
         
@@ -78,10 +76,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                             return
                         }
                         
-                        if UIApplication.shared.canOpenURL(url) {
-                            viewController.openWeb(stringURL: stringURL)
-                        } else {
-                            viewController.openApp()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                            if UIApplication.shared.canOpenURL(url) {
+                                viewController.openWeb(stringURL: stringURL)
+                            } else {
+                                viewController.openApp()
+                            }
                         }
                     }
                     
@@ -140,6 +140,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                 case .authorized:
                     self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString
                     Settings.shared.isAdvertiserTrackingEnabled = true
+                    print("IIIAAA THIRD")
                 case .denied:
                     print("Denied")
                     self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString

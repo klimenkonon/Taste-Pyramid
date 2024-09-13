@@ -11,13 +11,27 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         let backgroundImageView = UIImageView(image: UIImage(named: "background"))
-            backgroundImageView.contentMode = .scaleAspectFill
-            backgroundImageView.frame = view.bounds
-            backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-            backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-        
+        backgroundImageView.contentMode = .scaleAspectFill
+        backgroundImageView.frame = view.bounds
+        backgroundImageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         view.insertSubview(backgroundImageView, at: 0)
+        
+        let loadingLabel = UILabel()
+        loadingLabel.text = "Loading..."
+        loadingLabel.textColor = .yellow
+        loadingLabel.font = UIFont(name: "Times New Roman", size: 31)
+        loadingLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(loadingLabel)
+        
+        // Устанавливаем Constraints для центрации текста
+        NSLayoutConstraint.activate([
+            loadingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
     }
     
     func openApp() {
