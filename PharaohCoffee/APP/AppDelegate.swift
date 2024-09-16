@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
     var window: UIWindow?
     weak var initialVC: ViewController?
     var identifierAdvertising: String = ""
+    var timer = 0
     static var orientationLock = UIInterfaceOrientationMask.all
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -45,9 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
     }
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-            return AppDelegate.orientationLock
-        }
-
+        return AppDelegate.orientationLock
+    }
+    
     func start(viewController: ViewController) {
         Flagsmith.shared.getValueForFeature(withID: "someurl", forIdentity: nil) { result in
             DispatchQueue.main.async {
@@ -63,23 +64,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                     }
                     
                     self.parseJSONString(stringJSON) { parsedResult in
+                        
                         guard parsedResult != "respect" else {
                             viewController.openApp()
                             return
                         }
                         
-                        let stringURL = viewController.createURL(mainURL: parsedResult, deviceID: deviceID, facebookURL: facebookDeepLink, advertiseID: self.identifierAdvertising)
-                        print("URL: \(stringURL)")
-                        
-                        guard let url = URL(string: stringURL) else {
+                        guard !parsedResult.isEmpty else {
+                            print("IIIAAA OPEN APP 1")
                             viewController.openApp()
                             return
                         }
                         
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                        print("IIIAAA SECOND")
+                        if self.identifierAdvertising.isEmpty {
+                            print("IIIAAA THIRD")
+                            self.timer = 5
+                            self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                        }
+                        
+                        if self.identifierAdvertising.isEmpty {
+                            viewController.openApp()
+                            return
+                        }
+                        
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(self.timer)) {
+                            let stringURL = viewController.createURL(mainURL: parsedResult, deviceID: deviceID, facebookURL: facebookDeepLink, advertiseID: self.identifierAdvertising)
+                            print("IIIAAA URL: \(stringURL)")
+                            
+                            guard let url = URL(string: stringURL) else {
+                                viewController.openApp()
+                                return
+                            }
+                            
                             if UIApplication.shared.canOpenURL(url) {
                                 viewController.openWeb(stringURL: stringURL)
                             } else {
+                                print("IIIAAA OPEN APP")
                                 viewController.openApp()
                             }
                         }
@@ -91,7 +113,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                 }
             }
         }
-
+        
     }
     
     func parseJSONString(_ jsonString: String, completion: @escaping (String) -> Void) {
@@ -117,30 +139,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
             }
             if let url = url {
                 deepLink = url.absoluteString
-//                if let data = deepLink.data(using: .utf8) {
-//                    let base64String = data.base64EncodedString()
-//                    deepLink = base64String
-//                }
+                //                if let data = deepLink.data(using: .utf8) {
+                //                    let base64String = data.base64EncodedString()
+                //                    deepLink = base64String
+                //                }
             }
         }
         return deepLink
     }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
-            AppsFlyerLib.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
-            return true
-        }
-
+        AppsFlyerLib.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
+        return true
+    }
+    
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         if #available(iOS 14, *) {
             AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
             ATTrackingManager.requestTrackingAuthorization { (status) in
+                print("IIIAAA FIRST")
+                self.timer = 10
                 switch status {
                 case .authorized:
                     self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString
+                    self.timer = 1
                     Settings.shared.isAdvertiserTrackingEnabled = true
-                    print("IIIAAA THIRD")
                 case .denied:
                     print("Denied")
                     self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString
@@ -179,8 +203,8 @@ struct Property: Codable {
     let clock, propertyGuard, season, source: String
     
     enum CodingKeys: String, CodingKey {
-            case walk, clock
-            case propertyGuard = "guard"
-            case season, source
-        }
+        case walk, clock
+        case propertyGuard = "guard"
+        case season, source
+    }
 }

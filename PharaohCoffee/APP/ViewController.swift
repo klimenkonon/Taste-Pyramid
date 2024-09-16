@@ -24,15 +24,28 @@ class ViewController: UIViewController {
         loadingLabel.textColor = .yellow
         loadingLabel.font = UIFont(name: "Times New Roman", size: 31)
         loadingLabel.translatesAutoresizingMaskIntoConstraints = false
-        
+                
         view.addSubview(loadingLabel)
+        
+        // Создаем и настраиваем индикатор активности
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .yellow
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        activityIndicator.startAnimating() // Запускаем анимацию индикатора
+        
+        view.addSubview(activityIndicator)
         
         // Устанавливаем Constraints для центрации текста
         NSLayoutConstraint.activate([
             loadingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            loadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            loadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            
+            // Устанавливаем Constraints для индикатора активности ниже текста
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.topAnchor.constraint(equalTo: loadingLabel.bottomAnchor, constant: 20)
         ])
     }
+
     
     func openApp() {
         DispatchQueue.main.async {
