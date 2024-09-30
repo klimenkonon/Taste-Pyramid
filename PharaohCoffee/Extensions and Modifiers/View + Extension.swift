@@ -1,6 +1,6 @@
 //
 //  View + Extension.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 20.08.2024.
 //

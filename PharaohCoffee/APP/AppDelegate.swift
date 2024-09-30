@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 20.08.2024.
 //
@@ -9,7 +9,6 @@
 
 import SwiftUI
 import FlagsmithClient
-import FBSDKCoreKit
 import AppsFlyerLib
 import AppTrackingTransparency
 import AdSupport
@@ -56,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                 case .success(let value):
                     
                     let deviceID = AppsFlyerLib.shared().getAppsFlyerUID()
-                    let facebookDeepLink = self.getFacebook()
                     
                     guard let stringJSON = value?.stringValue else {
                         viewController.openApp()
@@ -71,14 +69,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                         }
                         
                         guard !parsedResult.isEmpty else {
-                            print("IIIAAA OPEN APP 1")
                             viewController.openApp()
                             return
                         }
                         
-                        print("IIIAAA SECOND")
                         if self.identifierAdvertising.isEmpty {
-                            print("IIIAAA THIRD")
                             self.timer = 5
                             self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString
                         }
@@ -90,8 +85,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                         
                         
                         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(self.timer)) {
-                            let stringURL = viewController.createURL(mainURL: parsedResult, deviceID: deviceID, facebookURL: facebookDeepLink, advertiseID: self.identifierAdvertising)
-                            print("IIIAAA URL: \(stringURL)")
+                            let stringURL = viewController.createURL(mainURL: parsedResult, deviceID: deviceID, advertiseID: self.identifierAdvertising)
+                            print("URL: \(stringURL)")
                             
                             guard let url = URL(string: stringURL) else {
                                 viewController.openApp()
@@ -101,7 +96,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                             if UIApplication.shared.canOpenURL(url) {
                                 viewController.openWeb(stringURL: stringURL)
                             } else {
-                                print("IIIAAA OPEN APP")
                                 viewController.openApp()
                             }
                         }
@@ -130,23 +124,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
         }
     }
     
-    func getFacebook() -> String {
-        var deepLink = ""
-        
-        AppLinkUtility.fetchDeferredAppLink { (url, error) in
-            if let error = error {
-                print("Received error while fetching deferred app link %@", error)
-            }
-            if let url = url {
-                deepLink = url.absoluteString
-                //                if let data = deepLink.data(using: .utf8) {
-                //                    let base64String = data.base64EncodedString()
-                //                    deepLink = base64String
-                //                }
-            }
-        }
-        return deepLink
-    }
+//    func getFacebook() -> String {
+//        var deepLink = ""
+//        
+//        AppLinkUtility.fetchDeferredAppLink { (url, error) in
+//            if let error = error {
+//                print("Received error while fetching deferred app link %@", error)
+//            }
+//            if let url = url {
+//                deepLink = url.absoluteString
+//                //                if let data = deepLink.data(using: .utf8) {
+//                //                    let base64String = data.base64EncodedString()
+//                //                    deepLink = base64String
+//                //                }
+//            }
+//        }
+//        return deepLink
+//    }
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         AppsFlyerLib.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
@@ -164,7 +158,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
                 case .authorized:
                     self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString
                     self.timer = 1
-                    Settings.shared.isAdvertiserTrackingEnabled = true
                 case .denied:
                     print("Denied")
                     self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString

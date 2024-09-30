@@ -1,6 +1,6 @@
 //
 //  StorageManager.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 25.08.2024.
 //

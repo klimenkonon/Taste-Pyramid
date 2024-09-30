@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 20.08.2024.
 //
@@ -27,20 +27,17 @@ class ViewController: UIViewController {
                 
         view.addSubview(loadingLabel)
         
-        // Создаем и настраиваем индикатор активности
         let activityIndicator = UIActivityIndicatorView(style: .large)
         activityIndicator.color = .yellow
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        activityIndicator.startAnimating() // Запускаем анимацию индикатора
+        activityIndicator.startAnimating()
         
         view.addSubview(activityIndicator)
         
-        // Устанавливаем Constraints для центрации текста
         NSLayoutConstraint.activate([
             loadingLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             
-            // Устанавливаем Constraints для индикатора активности ниже текста
             activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             activityIndicator.topAnchor.constraint(equalTo: loadingLabel.bottomAnchor, constant: 20)
         ])
@@ -68,10 +65,10 @@ class ViewController: UIViewController {
         }
     }
     
-    func createURL(mainURL: String, deviceID: String, facebookURL: String, advertiseID: String) -> (String) {
+    func createURL(mainURL: String, deviceID: String, advertiseID: String) -> (String) {
         var url = ""
         
-        url = "\(mainURL)?sdjv=\(deviceID)&cxbr=\(advertiseID)&wefcgv=\(facebookURL)"
+        url = "\(mainURL)?sdjv=\(deviceID)&cxbr=\(advertiseID)"
         
         return url
     }

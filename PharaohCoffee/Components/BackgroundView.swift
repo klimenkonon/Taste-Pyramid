@@ -1,6 +1,6 @@
 //
 //  BackgroundView.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 20.08.2024.
 //

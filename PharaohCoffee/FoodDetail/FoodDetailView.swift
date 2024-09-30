@@ -1,6 +1,6 @@
 //
 //  FoodDetailView.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 22.08.2024.
 //

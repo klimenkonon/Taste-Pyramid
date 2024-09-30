@@ -1,6 +1,6 @@
 //
 //  ProgressAlert.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 26.08.2024.
 //

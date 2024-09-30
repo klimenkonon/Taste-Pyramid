@@ -1,6 +1,6 @@
 //
 //  MainViewModel.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 21.08.2024.
 //

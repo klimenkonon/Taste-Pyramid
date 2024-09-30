@@ -1,6 +1,6 @@
 //
 //  MainView.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 21.08.2024.
 //
@@ -21,7 +21,7 @@ struct MainView: View {
                         LogoView(width: 100, height: 100)
                             
                         
-                        Text("TASTE PYRAMID")
+                        Text("BOOK OF DELIGHTS RA")
                             .foregroundStyle(Color.semiYellow)
                             .font(.system(size: 34, weight: .heavy, design: .serif))
                             .padding(.leading, 30)

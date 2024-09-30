@@ -251,13 +251,6 @@
 			path = RealmModel;
 			sourceTree = "<group>";
 		};
-		A5C8DDF22C8F3E32007226FE /* Orientation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Orientation;
-			sourceTree = "<group>";
-		};
 		A5F3885D2C74B85700BA151A = {
 			isa = PBXGroup;
 			children = (
@@ -281,7 +274,6 @@
 		A5F388682C74B85700BA151A /* PharaohCoffee */ = {
 			isa = PBXGroup;
 			children = (
-				A5C8DDF22C8F3E32007226FE /* Orientation */,
 				A56741B02C774AE200C5C6D0 /* Profile */,
 				A56741AF2C774ADA00C5C6D0 /* Favourite */,
 				A56741AA2C77430E00C5C6D0 /* FoodDetail */,
@@ -760,7 +752,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.7;
+				MARKETING_VERSION = 1.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -799,7 +791,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.7;
+				MARKETING_VERSION = 1.0.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

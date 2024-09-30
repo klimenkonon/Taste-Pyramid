@@ -1,6 +1,6 @@
 //
 //  WebView.swift
-//  PharaohCoffee
+//
 //
 //  Created by Danylo Klymenko on 09.09.2024.
 //

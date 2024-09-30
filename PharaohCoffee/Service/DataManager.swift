@@ -1,6 +1,6 @@
 //
 //  DataManager.swift
-//  PharaohCoffee
+//  
 //
 //  Created by Danylo Klymenko on 25.08.2024.
 //
@@ -34,7 +34,7 @@ class DataManager {
     }
     
     func generateQRCode(from string: String) -> UIImage {
-        filter.message = Data("http://pharaohcoffee.com/order/\(string)".utf8)
+        filter.message = Data("http://bookOfDelightRa.com/order/\(string)".utf8)
 
         if let outputImage = filter.outputImage {
             if let cgImage = context.createCGImage(outputImage, from: outputImage.extent) {
