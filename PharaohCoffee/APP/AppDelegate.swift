@@ -42,12 +42,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate, UNUserN
         AppsFlyerLib.shared().deepLinkDelegate = self
         AppsFlyerLib.shared().delegate = self
         
+        
         start(viewController: viewController)
         
         AppsFlyerLib.shared().start()
         AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
         
-        // Request authorization for push notifications
+        // PUSH EXPRESS
+        myOwnDatabaseExternalId = AppsFlyerLib.shared().getAppsFlyerUID()
+        
         let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
         UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { granted, error in
             if let error = error {
