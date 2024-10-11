@@ -11,14 +11,6 @@
 			</array>
 		</dict>
 	</array>
-	<key>FacebookAdvertiserIDCollectionEnabled</key>
-	<string>TRUE</string>
-	<key>FacebookAppID</key>
-	<string>160049603810526</string>
-	<key>FacebookClientToken</key>
-	<string>93a8d4167cedf05ebd212017a4636cf5</string>
-	<key>FacebookDisplayName</key>
-	<string>BookofRa</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -29,5 +21,10 @@
 		<key>UIApplicationSupportsMultipleScenes</key>
 		<false/>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>

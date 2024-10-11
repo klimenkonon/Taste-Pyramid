@@ -13,16 +13,21 @@ import AppsFlyerLib
 import AppTrackingTransparency
 import AdSupport
 import FirebaseCore
+import UserNotifications
+import SdkPushExpress
 
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate, UNUserNotificationCenterDelegate {
     
     var window: UIWindow?
     weak var initialVC: ViewController?
     var identifierAdvertising: String = ""
     var timer = 0
     static var orientationLock = UIInterfaceOrientationMask.all
+    
+    private let PUSHEXPRESS_APP_ID = "27361-1202"
+    private var myOwnDatabaseExternalId = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
@@ -41,6 +46,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
         
         AppsFlyerLib.shared().start()
         AppsFlyerLib.shared().waitForATTUserAuthorization(timeoutInterval: 60)
+        
+        // Request authorization for push notifications
+        let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+        UNUserNotificationCenter.current().requestAuthorization(options: authOptions) { granted, error in
+            if let error = error {
+                print("Error requesting authorization for notifications: \(error)")
+            } else {
+                print("Permission granted: \(granted)")
+                DispatchQueue.main.async {
+                    application.registerForRemoteNotifications()
+                }
+            }
+        }
+        UNUserNotificationCenter.current().delegate = self
+        
+        // Initialize and activate PushExpressManager
+        do {
+            try PushExpressManager.shared.initialize(appId: PUSHEXPRESS_APP_ID)
+            try PushExpressManager.shared.activate(extId: myOwnDatabaseExternalId)
+            print("PushExpress initialized and activated")
+            print("externalId: '\(PushExpressManager.shared.externalId)'")
+        } catch {
+            print("Error initializing or activating PushExpressManager: \(error)")
+        }
+        
+        if !PushExpressManager.shared.notificationsPermissionGranted {
+            print("Notifications permission not granted. Please enable notifications in Settings.")
+            // You can show a custom alert to the user here
+        }
+        
         return true
     }
     
@@ -124,24 +159,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
         }
     }
     
-//    func getFacebook() -> String {
-//        var deepLink = ""
-//        
-//        AppLinkUtility.fetchDeferredAppLink { (url, error) in
-//            if let error = error {
-//                print("Received error while fetching deferred app link %@", error)
-//            }
-//            if let url = url {
-//                deepLink = url.absoluteString
-//                //                if let data = deepLink.data(using: .utf8) {
-//                //                    let base64String = data.base64EncodedString()
-//                //                    deepLink = base64String
-//                //                }
-//            }
-//        }
-//        return deepLink
-//    }
-    
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         AppsFlyerLib.shared().handleOpen(url, sourceApplication: sourceApplication, withAnnotation: annotation)
         return true
@@ -173,6 +190,36 @@ class AppDelegate: UIResponder, UIApplicationDelegate, DeepLinkDelegate {
             self.identifierAdvertising = ASIdentifierManager.shared().advertisingIdentifier.uuidString
         }
         AppsFlyerLib.shared().start()
+    }
+    
+    // MARK: Push Notification Handling
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let tokenParts = deviceToken.map { data in String(format: "%02.2hhx", data) }
+        let token = tokenParts.joined()
+        print("Device Token: \(token)")
+        PushExpressManager.shared.transportToken = token
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register for remote notifications: \(error)")
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        print("Received notification while app is in foreground: \(userInfo)")
+        completionHandler([.banner, .list, .sound])
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        print("Handling notification response: \(userInfo)")
+        NotificationCenter.default.post(name: Notification.Name("didReceiveRemoteNotification"), object: nil, userInfo: userInfo)
+        completionHandler()
     }
 }
 

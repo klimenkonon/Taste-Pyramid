@@ -21,7 +21,7 @@ struct MainView: View {
                         LogoView(width: 100, height: 100)
                             
                         
-                        Text("BOOK OF DELIGHTS RA")
+                        Text("TASTE \nPYRAMID")
                             .foregroundStyle(Color.semiYellow)
                             .font(.system(size: 34, weight: .heavy, design: .serif))
                             .padding(.leading, 30)

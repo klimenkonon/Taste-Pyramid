@@ -1,5 +1,5 @@
 {
-  "originHash" : "c3d25accb05db2dbcb91cc49079130df6cb945ff85e502cbf729e5c23448a832",
+  "originHash" : "79d04f6ab07ad652ee592a8e6248a7fcb8c3b86345c21e34778ff36b338ab5b1",
   "pins" : [
     {
       "identity" : "flagsmith-ios-client",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "31e9be36398d213fc07b5d77c08d8cce5ee2f508",
         "version" : "3.6.2"
+      }
+    },
+    {
+      "identity" : "pushexpress-swift-sdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pushexpress/pushexpress-swift-sdk",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e3642f1b37b4e2729af501c4578d9f3ccf8ddd81"
       }
     }
   ],

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64EAB4232CB816B10086D81C /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 64EAB4222CB816B10086D81C /* SdkPushExpress */; };
+		64EAB42B2CB816EF0086D81C /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64EAB42A2CB816EF0086D81C /* NotificationService.swift */; };
+		64EAB42F2CB816EF0086D81C /* notificationsvc.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 64EAB4282CB816EF0086D81C /* notificationsvc.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		64EAB4352CB8170D0086D81C /* SdkPushExpress in Frameworks */ = {isa = PBXBuildFile; productRef = 64EAB4342CB8170D0086D81C /* SdkPushExpress */; };
 		7C0755BD72F87A81C131C955 /* Pods_PharaohCoffee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9A207DE5599ECAD42D090C /* Pods_PharaohCoffee.framework */; };
 		A567417B2C75DB3D00C5C6D0 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567417A2C75DB3D00C5C6D0 /* CustomTabBar.swift */; };
 		A567417D2C75DB7F00C5C6D0 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A567417C2C75DB7F00C5C6D0 /* TabBar.swift */; };
@@ -60,8 +64,37 @@
 		A5F388982C74C1A400BA151A /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F388972C74C1A400BA151A /* OnBoardingView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		64EAB42D2CB816EF0086D81C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5F3885E2C74B85700BA151A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64EAB4272CB816EF0086D81C;
+			remoteInfo = notificationsvc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		64EAB4332CB816EF0086D81C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				64EAB42F2CB816EF0086D81C /* notificationsvc.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E9A207DE5599ECAD42D090C /* Pods_PharaohCoffee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PharaohCoffee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		64EAB4282CB816EF0086D81C /* notificationsvc.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = notificationsvc.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		64EAB42A2CB816EF0086D81C /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		64EAB42C2CB816EF0086D81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64EAB4372CB817650086D81C /* PharaohCoffee.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PharaohCoffee.entitlements; sourceTree = "<group>"; };
+		64EAB4382CB81B2C0086D81C /* notificationsvc.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = notificationsvc.entitlements; sourceTree = "<group>"; };
 		7282642DE67E0C513C2979F4 /* Pods-PharaohCoffee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharaohCoffee.debug.xcconfig"; path = "Target Support Files/Pods-PharaohCoffee/Pods-PharaohCoffee.debug.xcconfig"; sourceTree = "<group>"; };
 		783F5CB06DBCB655FB53191E /* Pods-PharaohCoffee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PharaohCoffee.release.xcconfig"; path = "Target Support Files/Pods-PharaohCoffee/Pods-PharaohCoffee.release.xcconfig"; sourceTree = "<group>"; };
 		A567417A2C75DB3D00C5C6D0 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
@@ -118,18 +151,37 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		64EAB4252CB816EF0086D81C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64EAB4352CB8170D0086D81C /* SdkPushExpress in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5F388632C74B85700BA151A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7C0755BD72F87A81C131C955 /* Pods_PharaohCoffee.framework in Frameworks */,
 				A5B1A10A2C904C6C00C92EAF /* FlagsmithClient in Frameworks */,
+				64EAB4232CB816B10086D81C /* SdkPushExpress in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64EAB4292CB816EF0086D81C /* notificationsvc */ = {
+			isa = PBXGroup;
+			children = (
+				64EAB4382CB81B2C0086D81C /* notificationsvc.entitlements */,
+				64EAB42A2CB816EF0086D81C /* NotificationService.swift */,
+				64EAB42C2CB816EF0086D81C /* Info.plist */,
+			);
+			path = notificationsvc;
+			sourceTree = "<group>";
+		};
 		6B0EB079C70595483B69AF8A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -257,6 +309,7 @@
 				A5C8DDF52C9037F4007226FE /* PrivacyInfo.xcprivacy */,
 				A5E523DE2C7CDAFE001A7904 /* GoogleService-Info.plist */,
 				A5F388682C74B85700BA151A /* PharaohCoffee */,
+				64EAB4292CB816EF0086D81C /* notificationsvc */,
 				A5F388672C74B85700BA151A /* Products */,
 				6B0EB079C70595483B69AF8A /* Pods */,
 				FB7ADFF0354972CFD80348FB /* Frameworks */,
@@ -267,6 +320,7 @@
 			isa = PBXGroup;
 			children = (
 				A5F388662C74B85700BA151A /* PharaohCoffee.app */,
+				64EAB4282CB816EF0086D81C /* notificationsvc.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +328,7 @@
 		A5F388682C74B85700BA151A /* PharaohCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				64EAB4372CB817650086D81C /* PharaohCoffee.entitlements */,
 				A56741B02C774AE200C5C6D0 /* Profile */,
 				A56741AF2C774ADA00C5C6D0 /* Favourite */,
 				A56741AA2C77430E00C5C6D0 /* FoodDetail */,
@@ -401,6 +456,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		64EAB4272CB816EF0086D81C /* notificationsvc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64EAB4302CB816EF0086D81C /* Build configuration list for PBXNativeTarget "notificationsvc" */;
+			buildPhases = (
+				64EAB4242CB816EF0086D81C /* Sources */,
+				64EAB4252CB816EF0086D81C /* Frameworks */,
+				64EAB4262CB816EF0086D81C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = notificationsvc;
+			packageProductDependencies = (
+				64EAB4342CB8170D0086D81C /* SdkPushExpress */,
+			);
+			productName = notificationsvc;
+			productReference = 64EAB4282CB816EF0086D81C /* notificationsvc.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A5F388652C74B85700BA151A /* PharaohCoffee */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A5F3887A2C74B85A00BA151A /* Build configuration list for PBXNativeTarget "PharaohCoffee" */;
@@ -411,14 +486,17 @@
 				A5F388642C74B85700BA151A /* Resources */,
 				947183559A62C312055D6007 /* [CP] Embed Pods Frameworks */,
 				4E6488B929B4A54F44BA4A16 /* [CP] Copy Pods Resources */,
+				64EAB4332CB816EF0086D81C /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				64EAB42E2CB816EF0086D81C /* PBXTargetDependency */,
 			);
 			name = PharaohCoffee;
 			packageProductDependencies = (
 				A5B1A1092C904C6C00C92EAF /* FlagsmithClient */,
+				64EAB4222CB816B10086D81C /* SdkPushExpress */,
 			);
 			productName = PharaohCoffee;
 			productReference = A5F388662C74B85700BA151A /* PharaohCoffee.app */;
@@ -431,9 +509,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
+					64EAB4272CB816EF0086D81C = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					A5F388652C74B85700BA151A = {
 						CreatedOnToolsVersion = 15.3;
 					};
@@ -450,17 +531,26 @@
 			mainGroup = A5F3885D2C74B85700BA151A;
 			packageReferences = (
 				A5B1A1082C904C6C00C92EAF /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */,
+				64EAB4212CB816B10086D81C /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */,
 			);
 			productRefGroup = A5F388672C74B85700BA151A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A5F388652C74B85700BA151A /* PharaohCoffee */,
+				64EAB4272CB816EF0086D81C /* notificationsvc */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		64EAB4262CB816EF0086D81C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5F388642C74B85700BA151A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -535,6 +625,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		64EAB4242CB816EF0086D81C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64EAB42B2CB816EF0086D81C /* NotificationService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A5F388622C74B85700BA151A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,6 +686,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		64EAB42E2CB816EF0086D81C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64EAB4272CB816EF0086D81C /* notificationsvc */;
+			targetProxy = 64EAB42D2CB816EF0086D81C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A5F3886F2C74B85800BA151A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -608,6 +714,72 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		64EAB4312CB816EF0086D81C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = notificationsvc/notificationsvc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		64EAB4322CB816EF0086D81C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = notificationsvc/notificationsvc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notificationsvc/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = notificationsvc;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee.notificationsvc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		A5F388782C74B85A00BA151A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -731,8 +903,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7282642DE67E0C513C2979F4 /* Pods-PharaohCoffee.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PharaohCoffee/PharaohCoffee.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -752,7 +926,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -770,8 +944,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 783F5CB06DBCB655FB53191E /* Pods-PharaohCoffee.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PharaohCoffee/PharaohCoffee.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
@@ -791,7 +967,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.8;
+				MARKETING_VERSION = 1.0.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.PharaohCoffee;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -808,6 +984,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		64EAB4302CB816EF0086D81C /* Build configuration list for PBXNativeTarget "notificationsvc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64EAB4312CB816EF0086D81C /* Debug */,
+				64EAB4322CB816EF0086D81C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A5F388612C74B85700BA151A /* Build configuration list for PBXProject "PharaohCoffee" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -829,6 +1014,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		64EAB4212CB816B10086D81C /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pushexpress/pushexpress-swift-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		A5B1A1082C904C6C00C92EAF /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Flagsmith/flagsmith-ios-client.git";
@@ -840,6 +1033,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		64EAB4222CB816B10086D81C /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64EAB4212CB816B10086D81C /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
+		64EAB4342CB8170D0086D81C /* SdkPushExpress */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64EAB4212CB816B10086D81C /* XCRemoteSwiftPackageReference "pushexpress-swift-sdk" */;
+			productName = SdkPushExpress;
+		};
 		A5B1A1092C904C6C00C92EAF /* FlagsmithClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A5B1A1082C904C6C00C92EAF /* XCRemoteSwiftPackageReference "flagsmith-ios-client" */;

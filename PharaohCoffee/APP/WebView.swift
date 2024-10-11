@@ -64,7 +64,10 @@ class ADJWebHandler: UIViewController, WKNavigationDelegate, WKUIDelegate {
         let configuration = configuration ?? WKWebViewConfiguration()
         configuration.allowsInlineMediaPlayback = true
         
+        configuration.applicationNameForUserAgent = "MyApp/1.0"
         let webView = WKWebView(frame: frame, configuration: configuration)
+        webView.customUserAgent = "Mozilla/5.0 (iPhone; CPU iPhone OS 10_0_1 like Mac OS X) AppleWebKit/602.1.50 (KHTML, like Gecko) Version/10.0 Mobile/14A403 Safari/602.1"
+        
         webView.navigationDelegate = self
         webView.uiDelegate = self
         webView.scrollView.showsVerticalScrollIndicator = false
